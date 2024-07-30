@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1;
+    grid-template-rows: auto;
+    
+}
+
+body{
+    background-color: rgb(37, 37, 37);
+}
+
+nav{
+    background-color: #1e1c1c;
+}
+
+.presentacion{
+    background-color: #1e1c1c;
+    align-items: center;
+    padding: 20px;
+    grid-row: 2;
+    margin: 20px 10%;
+    border: solid 1px white;
+    border-radius: 20px;
+    box-shadow: 10px 20px 10px rgba(75, 74, 74, 0.8);
+    
+}
+
+
+
+
+.presentacion h1 {
+    text-align: center;
+    color: rgb(153, 152, 152);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.presentacion h3 {
+    color: rgb(153, 152, 152);
+    text-transform:capitalize;
+    font-weight: bold;
+}
+.presentacion p{
+    color: rgb(153, 152, 152);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.seccionCategorias{
+    grid-row: 3;
+    display: flex;
+}
+
+.seccionCategorias section{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 10px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 5px rgba(75, 74, 74, 0.8);
+}
+
+    .imagenCategoria img {
+        width: 25%;
+        height: 15%;
+    }
+
+section h3{
+    color: rgb(153, 152, 152);
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    background-image: url(../assets/imagenes/fondoLogo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.logo {
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+    height: 80%;
+
+}
+
+
+.footer{
+    background-color: black;
+    margin-top: 30px;
+}
+
+.footer p{
+    color: white;
+    text-align: left;
+    font-size: 0.8rem;
+    margin: 5px 3px;
+    padding: 5px 3px;
+}
+
+
+/* fin de estilos generales */
+
+@media (max-width: 500px) {
+.seccionCategorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+
+    .imagenCategoria img {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .presentacion{
+        background-color: #1e1c1c;
+        align-items: center;
+        padding: 20px;
+        grid-row: 2;
+        margin: 20px 10%;
+        border: solid 1px white;
+        border-radius: 20px;
+        box-shadow: 10px 20px 10px rgba(75, 74, 74, 0.8);
+        
+    }
+    
+    
+    .presentacion h1 {
+        font-size: 1.5rem;
+    }
+    .presentacion h3{
+        font-size: 1.2rem;
+    }
+    .presentacion p{
+        font-size: 1rem;
+    }
+}
+
+
+/* responsive tablet */
+@media (min-width: 501px) and (max-width: 750px) {
+    .seccionCategorias{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+        gap: 40px;
+    }
+
+    .imagenCategoria{
+        margin: 20px;
+    }
+
+    .seccionCategorias img{
+        height: 200px;
+        width: 180px;
+    }
+}
+
+
+@media (min-width: 751px) {
+    .seccionCategorias{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+    }
+    
+    
+        .imagenCategoria img {
+
+            width: 220px;
+            height: 220px;
+        }
+        
+        .presentacion{
+            display: flex;
+            flex-direction: column;
+            background-color: #1e1c1c;
+            align-items: center;
+            padding: 20px;
+            grid-row: 2;
+            margin: 20px 10%;
+            border: solid 1px white;
+            border-radius: 20px;
+            box-shadow: 10px 20px 10px rgba(75, 74, 74, 0.8);
+            
+        }
+        
+        
+        .presentacion h1 {
+            font-size: 1.5rem;
+        }
+        .presentacion h3{
+            font-size: 1.2rem;
+        }
+        .presentacion p{
+            font-size: 1rem;
+        }
+}
+
+
+/*acordeon*/
+
+
+.contenedorAcordeon{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.contenedorAcordeon h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.acordeon{
+    background-color: #ffff;
+}
+
+.acordeon label{
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #1e1c1c;
+    color: #ffff;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: all 300ms ease;
+}
+
+.acordeon label:hover{
+    background-color: #2f2f2f;
+}
+
+.acordeon .contenidoAcordeon{
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.contenidoAcordeon div{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contenedorAcordeon img{
+    height: 10%;
+    width: 80%;
+}
+
+.btnAcordeon:checked ~ .contenidoAcordeon{
+    max-height: 600px;
+    padding: 15px 0px;
+}
+
+.btnAcordeon{
+    display: none;
+} 
